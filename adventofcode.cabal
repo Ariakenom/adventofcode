@@ -129,3 +129,10 @@ executable 2019_4b
   import: exe_template
   main-is:             2019/4/b.hs
 
+executable 2019_6a
+  import: exe_template
+  other-modules:       Preface
+  main-is:             2019/6/a.hs
+executable 2019_6b
+  import: exe_template
+  main-is:             2019/6/b.hs

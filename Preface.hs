@@ -47,7 +47,7 @@ import Data.Sequence as Preface (Seq)
 import Data.IntMap as Preface (IntMap)
 import Data.IntSet as Preface (IntSet)
 
-
+import qualified Data.Text as T
 import qualified Data.Set as Set
 import qualified Data.Map as Map
 
@@ -173,3 +173,8 @@ cardinality xs = Map.fromListWith (+) [ (x,1) | x <- xs ]
 csv = words . map (\c -> if c==',' then ' ' else c)
 uncsv = concat . intersperse ","
 
+tshowln :: Show a => a -> T.Text
+tshowln = T.pack . (++"\n") . show
+
+tread :: Read a => T.Text -> a
+tread = read . T.unpack
