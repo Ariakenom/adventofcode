@@ -178,3 +178,6 @@ tshowln = T.pack . (++"\n") . show
 
 tread :: Read a => T.Text -> a
 tread = read . T.unpack
+
+viaEnum :: (Enum a, Enum b) => a -> b
+viaEnum = toEnum . fromEnum
