@@ -30,8 +30,6 @@ exe rb pc mem is = case op of
         mode2  = (header `div` 1e4) `mod` 1e1
         val0   = readMem mode0 (pc+1)
         val1   = readMem mode1 (pc+2)
-        addr0  = mem `readMap` (pc+1)
-        addr2  = mem `readMap` (pc+3)
         readMem mode a = if
             | mode == 1 -> mem `readMap` a
             | mode == 0 -> mem `readMap` (mem `readMap` a)
