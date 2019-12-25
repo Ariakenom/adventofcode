@@ -152,3 +152,21 @@ executable 2019_7a
 executable 2019_7b
   import: exe_template
   main-is:             2019/7/b.hs
+
+
+executable 2019_9a
+  import: exe_template
+  other-modules:       Preface
+  main-is:             2019/9/a.hs
+executable 2019_9b
+  import: exe_template
+  main-is:             2019/9/b.hs
+
+executable 2019_25a
+  import: exe_template
+  other-modules:       Preface
+  main-is:             2019/25/a.hs
+executable 2019_25b
+  import: exe_template
+  main-is:             2019/25/b.hs
+
